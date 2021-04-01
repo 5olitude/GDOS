@@ -17,9 +17,9 @@ Denial Of Service attack in GO using TOR
           
      * simpletorddos.go 
      
-          Minimal code using tor connection
+          --Minimal code using tor connection
           
           
      * testtor.go 
      
-          Simple script to check the tor connectivity
+          --Simple script to check the tor connectivity
