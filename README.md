@@ -4,7 +4,6 @@ Denial Of Service attack in GO using TOR
 * EDUCATIONAL PURPOSE ONLY
 
 
-
  * CODE DESCRIPTION
   
      * ddos.go  
@@ -23,3 +22,7 @@ Denial Of Service attack in GO using TOR
      * testtor.go 
      
           --Simple script to check the tor connectivity
+          
+          *********************************************************************************************
+
+*** ddos.go  explanation ***
