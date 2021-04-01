@@ -37,8 +37,18 @@ Denial Of Service attack in GO using TOR
                  
                  
                  }
+		 
                  
-             Upto a certain limit the no of workers decides the code flow .Incresaing the no of wor
+            - Upto a certain limit the no of workers decides the code result .Incresaing the no of workers may help but there is not point in increasing beyond a               limit
+            
+            - This same concept is applicable for time.Sleep too
+  
+  
+     * Code Execution  
+          
+	  go run ddos.go -workers=200 -url=http://somekejfjejf4chan.kjd:80 (no of worker in default set to 100)
+	  
+	  If you want to dive into the  code just change the time.sleep(1 *time.Second) and amount of workers just play around 😊
 
     
 
