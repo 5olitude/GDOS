@@ -59,6 +59,10 @@ Denial Of Service attack in GO using TOR
 	  torcon, _ :=        url.Parse("socks5://127.0.0.1:9050")
 	  
 	  
+  * simpletorddos.go
+  
+           This is the implementation of minimal code ddos attack logic is same as above not messing up with channels cool 😊
+	  
 
     
 
