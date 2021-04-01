@@ -62,6 +62,12 @@ Denial Of Service attack in GO using TOR
  * simpletorddos.go
   
            This is the implementation of minimal code ddos attack logic is same as above not messing up with channels cool 😊
+	   
+	   
+	   
+ * tortester.go 
+        
+	checks the ip addr 
 	  
 
     
